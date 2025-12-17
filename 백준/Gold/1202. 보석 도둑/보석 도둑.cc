@@ -21,7 +21,9 @@ int main() {
     for(int i = 0; i < n; i++){
         int m, v;
         std::cin >> m >> v;
-        gems.push_back({m, v});
+        //for heavier objects, it is better to use emplace_back
+        //gems.push_back({m, v});
+        gems.emplace_back(m, v);
     }
     for(int j = 0; j < k; j++){
         int c;
